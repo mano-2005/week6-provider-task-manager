@@ -1,16 +1,14 @@
-# task_manager_app
+# State Management Refactoring with Provider Model
 
-A new Flutter project.
+A clean, production-grade Flutter task utility application demonstrating data state decoupling, structural widget modularity, and optimized consumer tree rendering.
 
-## Getting Started
+## 🚀 Architectural Implementation
+- **State Separation:** Refactored business execution contexts completely away from native ephemeral `setState` states into an independent data layer.
+- **ChangeNotifier Architecture:** Created single-responsibility state capsules using `notifyListeners()` to dispatch layout refreshes reactively.
+- **Modular Layout Splitting:** Extracted presentation structures out into fine-grained UI units (`TaskTile`) inside a dedicated widget directory to maximize reusability.
+- **Granular Rendering Scopes:** Leveraged isolated `Consumer` subscription nodes to tightly limit app frame processing strictly to updated list rows.
+- **Immutable State Prohibitions:** Exposed collection lists via `List.unmodifiable` to ensure backend datasets cannot be altered unintentionally outside provider definitions.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Execution Context
+- State Management Solution: `provider: ^6.1.2`
+- Architecture Engine: Material 3 Ecosystem
